@@ -1,0 +1,34 @@
+sitemap default label="Workshop Demo1" {
+    
+    Frame label="[Testlab] Climate" {
+        Text item=Sensor_Testlab_Temperature
+        Text item=Sensor_Testlab_Humidity
+        Text label="Climate Chart static" icon="line" {
+            Image refresh=60000 url="http://view:view@grafana.demo1:3000/render/d-solo/4rqAzhliz/workshop?orgId=1&from=now-30m&to=now&panelId=2&width=800&height=250"
+        }
+        Text label="Climate Chart dynamic" icon="line" {
+            Webview url="http://openhab.demo1.throwaway/static/chart_climate.html" height=12
+        }
+    }
+
+    Frame label="[Testlab] RC-Switch" {
+        Switch item=RcSwitch_Hackcenter_Spot_Light
+        Switch item=RcSwitch_Hackcenter_Electronics_Light
+        Switch item=RcSwitch_Hackcenter_Shelf_Light
+        Switch item=RcSwitch_Test
+    }
+
+    Frame label="[Testlab] Button & LEDs" {
+        Switch item=ESP_Led1
+        Switch item=ESP_Led2
+        Switch item=ESP_Button
+        Switch item=ESP_Button icon=wallswitch mappings=[ON="press me"]
+        Switch item=Softbutton
+    }
+
+    Frame label="[Testlab] Groups"{
+        Group item=gSensor icon=status
+    }
+
+
+}

@@ -1,0 +1,2 @@
+Number Sensor_Testlab_Temperature "Temperatur [%.2f °C]" <temperature> (gTemperature) {mqtt="<[mqtt:demo1/sensor/temperature/testlab:state:default]"}
+Number Sensor_Testlab_Humidity "Luftfeuchtigkeit [%d %%]" <humidity> (gHumidity) {mqtt="<[mqtt:demo1/sensor/humidity/testlab:state:default]"}

@@ -1,0 +1,6 @@
+Switch ESP_Button "ESP Button [MAP(button.map):%s]" <switch> (gButtons) { mqtt="<[mqtt:demo1/sensor/button/testlab:state:default]"}
+
+Switch ESP_Led1 "LED 1 [%s]" <light> (gLED) { mqtt=">[mqtt:demo1/actors/led1/testlab:command:*:${command}]"}
+Switch ESP_Led2 "LED 2 [%s]" <light> (gLED) { mqtt=">[mqtt:demo1/actors/led2/testlab:command:*:${command}]"}
+
+Switch Softbutton "Softbutton" <switch> (gButtons)

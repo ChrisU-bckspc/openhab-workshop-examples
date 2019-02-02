@@ -1,0 +1,31 @@
+// Toggle RCSwitch on button press
+rule "toggle RcSwitch"
+when
+    Item ESP_Button changed to ON
+then
+    if (RcSwitch_Hackcenter_Shelf_Light.state == OFF){
+        sendCommand(RcSwitch_Hackcenter_Shelf_Light, ON)
+    }else{
+        sendCommand(RcSwitch_Hackcenter_Shelf_Light, OFF)
+    }
+end
+
+
+
+// Do something only while button pressed
+/*
+rule "Foo while button pressed"
+when
+        Item ESP_Button changed
+then
+        if (ESP_Button.state == ON){
+            sendCommand(ESP_Led2, ON)
+            sendCommand(RcSwitch_Hackcenter_Shelf_Light, OFF)
+        }else{
+            sendCommand(ESP_Led2, OFF)
+            createTimer(now.plusSeconds(3)) [|
+                sendCommand(RcSwitch_Hackcenter_Shelf_Light, ON)
+            ]
+        }
+end
+*/

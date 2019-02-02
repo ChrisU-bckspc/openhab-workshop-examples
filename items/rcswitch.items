@@ -1,0 +1,4 @@
+Switch RcSwitch_Hackcenter_Shelf_Light "Regal [%s]" <light> (gRcSwitch, gLight) { mqtt=">[mqtt:demo1/actors/powersockets/testlab/11001/00011:command:*:${command}]"}
+Switch RcSwitch_Hackcenter_Spot_Light "Arbeitstische [%s]" <light> (gRcSwitch, gLight)  {mqtt=">[mqtt:demo1/actors/powersockets/testlab/11001/00001:command:*:${command}]"}
+Switch RcSwitch_Hackcenter_Electronics_Light "Elektronik-Ecke [%s]" <slider> (gRcSwitch, gLight) {mqtt=">[mqtt:demo1/actors/powersockets/testlab/11001/00111:command:*:${command}]"}
+Switch RcSwitch_Test "RC-Switch Test [%s]" <slider> (gRcSwitch, gLight) {mqtt=">[mqtt:demo1/actors/powersockets/testlab/11111/00001:command:*:${command}]"}

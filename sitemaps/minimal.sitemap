@@ -1,0 +1,8 @@
+sitemap default label="Workshop Demo1" {
+    
+    Frame label="[Testlab] Climate" {
+        Text item=Sensor_Testlab_Temperature
+        Text item=Sensor_Testlab_Humidity
+    }
+
+}

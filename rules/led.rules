@@ -1,0 +1,14 @@
+rule "Handle Softbutton"
+when
+    Item Softbutton changed
+then
+    gLED
+        .allMembers
+        .forEach[item |
+            if (Softbutton.state == ON){
+                sendCommand(item, ON)
+            }else{
+                sendCommand(item, OFF)
+            }
+        ]
+end

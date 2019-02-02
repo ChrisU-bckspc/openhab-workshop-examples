@@ -1,0 +1,9 @@
+Group gSensor
+Group gTemperature "Temperatures" (gSensor)
+Group gHumidity "Humidities" (gSensor)
+
+
+Group gRcSwitch
+Group gLight
+Group gButtons
+Group gLED (gLight)
